@@ -9,8 +9,6 @@
 /*   Updated: 2024/07/24 12:11:19 by belmiro          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-
 #include "../../includes/so_long.h"
 
 int	handle_resize(t_data *data)
@@ -18,26 +16,31 @@ int	handle_resize(t_data *data)
 	render(data);
 	return (0);
 }
-int key_convert(int keysym)
+
+int	key_convert(int keysym)
 {
-	int key;
+	int	key;
 
 	key = keysym;
-	if(keysym == XK_Up)
+	if (keysym == XK_Up)
 	{
 		key = 119;
-	}else if(keysym == XK_Down)
+	}
+	else if (keysym == XK_Down)
 	{
 		key = 115;
-	}else if(keysym == XK_Right)
+	}
+	else if (keysym == XK_Right)
 	{
 		key = 100;
-	}else if(keysym == XK_Left)
+	}
+	else if (keysym == XK_Left)
 	{
 		key = 97;
 	}
-	return(key);
+	return (key);
 }
+
 int	handle_keypress(int keysym, t_data *data)
 {
 	keysym = key_convert(keysym);
